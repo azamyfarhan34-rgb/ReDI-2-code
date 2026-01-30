@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReDI 2 Code</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      background: linear-gradient(90deg, #22c55e, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 6s linear infinite;
+    }
+
+    header p {
+      margin-top: 20px;
+      max-width: 600px;
+      color: #9ca3af;
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      margin-top: 40px;
+      padding: 14px 34px;
+      border-radius: 999px;
+      border: 1px solid #22c55e;
+      background: transparent;
+      color: #22c55e;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      background: #22c55e;
+      color: #022c22;
+      box-shadow: 0 0 30px #22c55e;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    /* ===== Cards ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: #22c55e;
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.25);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #22c55e;
+    }
+
+    /* ===== Timeline / Achievements ===== */
+    .achievement {
+      margin-top: 20px;
+      padding-left: 20px;
+      border-left: 3px solid #22c55e;
+      color: #d1d5db;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #000;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    @keyframes glow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header>
+    <h1>&lt; ReDI 2 Code /&gt;</h1>
+    <p>
+      Wir sind ein Robotics- & Coding-Team. Wir programmieren autonome Roboter mit LEGO SPIKE
+      und nehmen an Wettbewerben wie der First Lego League teil.
+    </p>
+    <button class="cta">Scroll to explore ↓</button>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section>
+    <h2>Über uns</h2>
+    <p>
+      ReDI 2 Code ist ein Team aus jungen Entwickler:innen und Tüftler:innen.
+      Unser Fokus liegt auf Robotik, logischem Denken und sauberem Code.
+    </p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section>
+    <h2>Was wir machen</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🤖 Robot Programming</h3>
+        <p>
+          Wir programmieren mit LEGO SPIKE Fahr-, Dreh- und Missionsabläufe
+          für autonome Roboter.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🧠 Logik & Algorithmen</h3>
+        <p>
+          Unsere Programme basieren auf Bedingungen, Sensorwerten
+          und klaren Entscheidungsstrukturen.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🏆 Wettbewerbe</h3>
+        <p>
+          Teilnahme an der First Lego League – Platz 11 im Jahr 2026.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section>
+    <h2>Achievements</h2>
+    <div class="achievement">
+      <strong>2026 – First Lego League</strong><br />
+      11. Platz · Robot Design · Coding · Teamwork
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2026 ReDI 2 Code · Built with logic, teamwork & caffeine ☕
+  </footer>
+
+</body>
+</html>
